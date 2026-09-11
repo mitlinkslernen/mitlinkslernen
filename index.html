@@ -171,6 +171,63 @@
   font-family: sans-serif;
   font-weight: 500;
 }
+.why-section {
+  background-color: #f7f4f0;
+  padding: 70px 0;
+}
+
+.why-inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.why-heading {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a2744;
+  letter-spacing: 1px;
+  margin: 0 0 50px 0;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.why-item {
+  text-align: center;
+}
+
+.why-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #eae6e0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.why-title {
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a2744;
+  margin: 0 0 10px 0;
+}
+
+.why-text {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
 
      @media (max-width: 768px) {
     .hero {
@@ -210,6 +267,11 @@
     width: 34px;
     height: 34px;
   }
+  
+  .why-grid {
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
 }
     </style>
   </head>
@@ -257,6 +319,60 @@
     <div class="hero-buttons">
       <a href="kurse.html" class="btn-primary">Prüfungskurs entdecken →</a>
       <a href="so-funktionierts.html" class="btn-secondary">So funktioniert's</a>
+    </div>
+  </div>
+</section>
+<section class="why-section">
+  <div class="why-inner">
+    <h2 class="why-heading">Warum Mit Links Lernen?</h2>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="2">
+            <circle cx="12" cy="12" r="9" />
+            <circle cx="12" cy="12" r="5" />
+            <circle cx="12" cy="12" r="1" />
+          </svg>
+        </div>
+        <h3 class="why-title">Prüfung im Blick</h3>
+        <p class="why-text">Lerne genau das, was du für deine Abschlussprüfung brauchst.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="1.8">
+    <path d="M9 3a3 3 0 0 0-3 3v.2A3 3 0 0 0 4 9v1a3 3 0 0 0 1 2.2V13a3 3 0 0 0 2 2.8V17a3 3 0 0 0 3 3" />
+    <path d="M9 3a2.5 2.5 0 0 1 3 2.5v11A2.5 2.5 0 0 1 9 19" />
+    <path d="M15 3a3 3 0 0 1 3 3v.2a3 3 0 0 1 2 2.8v1a3 3 0 0 1-1 2.2V13a3 3 0 0 1-2 2.8V17a3 3 0 0 1-3 3" />
+    <path d="M15 3a2.5 2.5 0 0 0-3 2.5v11a2.5 2.5 0 0 0 3 2.5" />
+  </svg>
+</div>
+        <h3 class="why-title">Einfach erklärt</h3>
+        <p class="why-text">Verständliche Erklärungen, statt unnötig komplizierter Theorie.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="2">
+            <rect x="6" y="2" width="12" height="20" rx="2" />
+            <line x1="10" y1="19" x2="14" y2="19" />
+          </svg>
+        </div>
+        <h3 class="why-title">Lernen, wann du willst</h3>
+        <p class="why-text">Videos, Aufgaben und Materialien – auf deinem Handy, Tablet oder PC.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="2">
+            <polyline points="3 17 9 11 13 15 21 6" />
+            <polyline points="15 6 21 6 21 12" />
+          </svg>
+        </div>
+        <h3 class="why-title">Schritt für Schritt</h3>
+        <p class="why-text">Von den Grundlagen bis zur Prüfungsaufgabe verständlich aufgebaut.</p>
+      </div>
     </div>
   </div>
 </section>
