@@ -306,6 +306,40 @@
   grid-template-columns: 1fr;
   gap: 30px;
 }
+.hero-fullbleed {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-bg-image {
+  position: relative;
+  height: 250px;
+  order: 2;
+}
+
+.hero-overlay {
+  display: none;
+}
+
+.hero-content-overlay {
+  position: relative;
+  transform: none;
+  left: 0;
+  order: 1;
+  background-color: white;
+  padding: 30px 20px;
+  justify-content: flex-start;
+}
+
+.hero-text {
+  max-width: 100%;
+  font-size: 26px;
+}
+
+.hero-subtext {
+  max-width: 100%;
+}
 }
     </style>
   </head>
