@@ -9,94 +9,256 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Startseite</title>
     <style>
+      * {
+  box-sizing: border-box;
+}
       body {
         margin: 0;
       }
+      html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
-      .top-nav {
-        position: absolute;
-        top: 20px;
-        right: 25px;
-        z-index: 10;
-      }
+      .site-header {
+  background-color: white;
+}
 
-      .top-nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
-      }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
 
-      .top-nav a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        font-family: sans-serif;
-        font-size: 15px;
-        background-color: black;
-        padding: 10px 20px;
-        border-radius: 10px;
-      }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
 
-      .top-nav a:hover {
-        text-decoration: underline;
-      }
+.logo-mit,
+.logo-lernen {
+  color: #1a2744;
+}
 
-      .hero-text {
-        position: absolute;
-        top: 20px;
-        left: 25px;
-        color: black;
-        font-size: 64px;
-        font-family: "Henny Penny", cursive;
-        margin: 0;
-        z-index: 10;
-      }
+.logo-links {
+  color: #c9a04c;
+}
 
-      .header-image {
-        display: block;
-        height: 100vh;
-        width: 100%;
-        object-fit: cover;
-        filter: grayscale(40%) brightness(90%);
-      }
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #1a2744;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main-nav a.active {
+  border-bottom: 2px solid #c9a04c;
+  padding-bottom: 4px;
+}
+
+.main-nav a:hover {
+  color: #c9a04c;
+  
+}
+
+.login-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #1a2744;
+  border-radius: 50%;
+}
+
+.hero-fullbleed {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, white 0%, white 15%, transparent 65%);
+}
+
+.hero-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.hero-text {
+  font-family: sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  max-width: 500px;
+}
+
+.hero-text .line-dark {
+  display: block;
+  color: #1a2744;
+}
+
+.hero-text .line-gold {
+  display: block;
+  color: #c9a04c;
+}
+
+.hero-subtext {
+  font-size: 16px;
+  color: #555;
+  font-family: sans-serif;
+  max-width: 420px;
+  margin: 0 0 30px 0;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
+  background-color: #1a2744;
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #1a2744;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
      @media (max-width: 768px) {
+    .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
   .hero-text {
     font-size: 26px;
-    left: 15px;
-    max-width: 50%;
   }
 
-  .top-nav {
-    top: 10px;
-    right: 10px;
+  .site-header {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    gap: 12px;
   }
 
-  .top-nav a {
+  .logo {
+    font-size: 18px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    gap: 12px 16px;
+  }
+
+  .main-nav a {
     font-size: 13px;
-    padding: 8px 14px;
   }
 
-  .header-image {
-    height: 60vh;
+  .login-icon {
+    width: 34px;
+    height: 34px;
   }
 }
     </style>
   </head>
   <body>
-    <nav class="top-nav">
-      <ul>
-        <li><a href="#">Startseite</a></li>
-        <li><a href="#">Kurse</a></li>
-        <li><a href="#">So funktioniert's</a></li>
-        <li><a href="#">Über mich</a></li>
-        <li><a href="#">Kontakt</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </nav>
-    <h2 class="hero-text">Mit links lernen</h2>
-    <img class="header-image" src="img/background.jpg" />
+    <header class="site-header">
+  <div class="header-inner">
+  <div class="logo">
+    <span class="logo-mit">Mit</span>
+    <span class="logo-links">Links</span>
+    <span class="logo-lernen">Lernen</span>
+  </div>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html" class="active">Startseite</a></li>
+      <li><a href="so-funktionierts.html">So funktioniert's</a></li>
+      <li><a href="kurse.html">Prüfungskurse</a></li>
+      <li><a href="ueber-mich.html">Über mich</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <a href="login.html" class="login-icon" aria-label="Zur Anmeldung">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="8" r="4" stroke="white" stroke-width="2"/>
+      <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </a>
+    </div>
+</header>
+<section class="hero-fullbleed">
+ <img src="img/background1.jpg" class="hero-bg-image" alt="Tablet auf Schreibtisch" />
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content-overlay">
+    <h1 class="hero-text">
+      <span class="line-dark">Deine Prüfung.</span>
+      <span class="line-gold">Dein Plan.</span>
+      <span class="line-dark">Dein Erfolg.</span>
+    </h1>
+    <p class="hero-subtext">
+      Mit Links Lernen begleitet dich Schritt für Schritt auf dem Weg zur
+      Realschulabschlussprüfung in Baden-Württemberg.
+    </p>
+    <div class="hero-buttons">
+      <a href="kurse.html" class="btn-primary">Prüfungskurs entdecken →</a>
+      <a href="so-funktionierts.html" class="btn-secondary">So funktioniert's</a>
+    </div>
+  </div>
+</section>
   </body>
 </html>
